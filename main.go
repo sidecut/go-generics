@@ -50,9 +50,9 @@ func SumFloats(m map[string]float64) float64 {
 	return s
 }
 
-// SumNumbers sums the values of map m. Its supports both integers
-// and floats as map values.
-func SumNumbers[K comparable, V Number](m map[K]V) V {
+// SumIntsOrFloats sums the values of map m. It supports both int64 and float64
+// as types for map values.
+func SumIntsOrFloats[K comparable, V Number](m map[K]V) V {
 	var s V
 	for _, v := range m {
 		s += v
@@ -60,9 +60,9 @@ func SumNumbers[K comparable, V Number](m map[K]V) V {
 	return s
 }
 
-// SumIntsOrFloats sums the values of map m. It supports both int64 and float64
-// as types for map values.
-func SumIntsOrFloats[K comparable, V Number](m map[K]V) V {
+// SumNumbers sums the values of map m. Its supports both integers
+// and floats as map values.
+func SumNumbers[K comparable, V Number](m map[K]V) V {
 	var s V
 	for _, v := range m {
 		s += v
